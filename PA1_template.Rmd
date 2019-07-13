@@ -84,7 +84,7 @@ totalstepsimputed <- aggregate(imputed$steps, by=list(imputed$date), FUN=sum)
 names(totalstepsimputed) <- c("date", "total_steps")
 
 with(totalstepsimputed, hist(total_steps, main="Frequency of daily step totals", 
-                             xlab="Total steps", ylab = "Frequency (number of days)"))
+                             xlab ="Total steps", ylab = "Frequency (number of days)"))
 ```
   
 We, again, calculate the mean and median steps taken per day, as follows.

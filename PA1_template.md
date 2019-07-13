@@ -117,7 +117,7 @@ totalstepsimputed <- aggregate(imputed$steps, by=list(imputed$date), FUN=sum)
 names(totalstepsimputed) <- c("date", "total_steps")
 
 with(totalstepsimputed, hist(total_steps, main="Frequency of daily step totals", 
-                             xlab="Total steps", ylab = "Frequency (number of days)"))
+                             xlab ="Total steps", ylab = "Frequency (number of days)"))
 ```
 
 ![](PA1_template_files/figure-html/visualise imputed-1.png)<!-- -->
