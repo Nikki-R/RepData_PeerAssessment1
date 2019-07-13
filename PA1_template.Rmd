@@ -39,7 +39,7 @@ The mean is `r meansteps` and the median is `r mediansteps`.
 
 The code below finds the number of steps for each time interval, averaged across all days. 
 It then creates a time series plot to visualise this data.
-```{r daily average, echo=TRUE}
+```{r daily_average, echo=TRUE}
 timeseries <- aggregate(stepsdat$steps, by=list(stepsdat$interval), FUN=mean, na.rm=TRUE)
 names(timeseries) <- c("interval", "mean_steps")
 with(timeseries, plot(x=interval, y=mean_steps, type="l", 
@@ -79,7 +79,7 @@ imputed <- select(imputed, steps, date, interval)
 ```
 
 The data within this new dataset can be visualised as a histogram.
-```{r visualise imputed, echo=TRUE}
+```{r visualise_imputed, echo=TRUE}
 totalstepsimputed <- aggregate(imputed$steps, by=list(imputed$date), FUN=sum)
 names(totalstepsimputed) <- c("date", "total_steps")
 
@@ -114,7 +114,7 @@ stepsdatday <- mutate(stepsdatday, daytype = as.factor(daytype))
 ```
 We can then summarise this data and plot it as a time series to examine the differences
 in activity patterns.
-```{r weekday plot, echo=TRUE}
+```{r weekday_plot, echo=TRUE}
 stepsavgday <- aggregate(stepsdatday$steps, by=list(stepsdatday$daytype,stepsdatday$interval), FUN=mean)
 names(stepsavgday) <- c("daytype", "interval", "mean_steps")
 library(ggplot2)

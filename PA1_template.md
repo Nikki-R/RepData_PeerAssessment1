@@ -54,7 +54,7 @@ with(timeseries, plot(x=interval, y=mean_steps, type="l",
                       xlab= "Time interval", ylab= "Mean number of steps"))
 ```
 
-![](PA1_template_files/figure-html/daily average-1.png)<!-- -->
+![](PA1_template_files/figure-html/daily_average-1.png)<!-- -->
 
 We then find the 5-minute interval that, on average, contains the maximum number of steps.
 
@@ -120,7 +120,7 @@ with(totalstepsimputed, hist(total_steps, main="Frequency of daily step totals",
                              xlab ="Total steps", ylab = "Frequency (number of days)"))
 ```
 
-![](PA1_template_files/figure-html/visualise imputed-1.png)<!-- -->
+![](PA1_template_files/figure-html/visualise_imputed-1.png)<!-- -->
   
 We, again, calculate the mean and median steps taken per day, as follows.
 
@@ -161,4 +161,4 @@ qplot(x=interval, y=mean_steps, data=stepsavgday,facets=daytype~., geom="line",
       xlab= "Time interval", ylab= "Mean number of steps")
 ```
 
-![](PA1_template_files/figure-html/weekday plot-1.png)<!-- -->
+![](PA1_template_files/figure-html/weekday_plot-1.png)<!-- -->
