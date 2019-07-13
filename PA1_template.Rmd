@@ -49,7 +49,7 @@ with(timeseries, plot(x=interval, y=mean_steps, type="l",
 
 We then find the 5-minute interval that, on average, contains the maximum number of steps.
 ```{r maxnumber, echo=TRUE}
-maxsteps <- timeseries[which.max(timeseries$mean_steps),2]
+maxsteps <- timeseries[which.max(timeseries$mean_steps),1]
 ```
 
 This is `r maxsteps` and matches the results shown in our time series plot.
